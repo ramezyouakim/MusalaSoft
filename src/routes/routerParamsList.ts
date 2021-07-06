@@ -1,3 +1,3 @@
 export type routerStackParamList = {
-    Home: undefined;
+    HomeScreen: undefined;
 };
