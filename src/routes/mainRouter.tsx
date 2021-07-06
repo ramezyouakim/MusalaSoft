@@ -3,7 +3,9 @@ import * as React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { routerStackParamList } from './routerParamsList';
+
 // Screens
+import HomeScreen from '../screens/HomeScreen/HomeScreen';
 
 // Components
 
@@ -16,10 +18,11 @@ function AppNavigator() {
 
         <NavigationContainer>
             <Stack.Navigator
-                initialRouteName="Home"
+                initialRouteName="HomeScreen"
                 screenOptions={() => ({
 
                 })}>
+                <Stack.Screen name="HomeScreen" options={() => ({ title: "Home" })} component={HomeScreen} />
             </Stack.Navigator>
         </NavigationContainer>
 
