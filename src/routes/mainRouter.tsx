@@ -5,11 +5,11 @@ import { createStackNavigator } from '@react-navigation/stack';
 import { routerStackParamList } from './routerParamsList';
 
 // Screens
-import HomeScreen from '../screens/HomeScreen/HomeScreen';
 
 // Components
 
 // Main Navigators
+import MainBottomTab from './mainBottomTab';
 const Stack = createStackNavigator<routerStackParamList>();
 
 // Main App Navigator
@@ -22,7 +22,7 @@ function AppNavigator() {
                 screenOptions={() => ({
 
                 })}>
-                <Stack.Screen name="HomeScreen" options={() => ({ title: "Home" })} component={HomeScreen} />
+                <Stack.Screen name="HomeScreen" options={() => ({ title: "Home" })} component={MainBottomTab} />
             </Stack.Navigator>
         </NavigationContainer>
 
