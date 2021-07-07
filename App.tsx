@@ -6,21 +6,20 @@ import store from './src/store';
 
 console.disableYellowBox = true;
 
-class App extends React.Component {
-  render() {
-    return (
+const App = () => {
 
-      <ErrorBoundary>
+  return (
 
-        <Provider store={store}>
+    <ErrorBoundary>
+
+      <Provider store={store}>
 
           <AppNavigator />
 
-        </Provider>
+      </Provider>
 
-      </ErrorBoundary>
+    </ErrorBoundary>
 
-    )
-  }
+  )
 }
 export default App;
