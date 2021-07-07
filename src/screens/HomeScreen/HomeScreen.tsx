@@ -2,7 +2,7 @@ import React from 'react';
 import { Text } from 'react-native';
 
 interface homeProps {
-
+    route: any
 }
 
 interface homeState {
@@ -17,6 +17,8 @@ class HomeScreen extends React.PureComponent<homeProps, homeState> {
     }
 
     render() {
+        const { route } = this.props;
+
         return (
             <Text>ddddd</Text>
         )

@@ -1,4 +1,8 @@
 export type MainBottomTabParamList = {
-    HomeScreen: undefined;
-    SettingsScreen: undefined;
+    HomeScreen: {
+        theme:any
+    };
+    SettingsScreen: {
+        theme:any
+    };
 };
