@@ -1,4 +1,5 @@
 {
   "name": "MusalaApp",
-  "displayName": "MusalaApp"
+  "displayName": "MusalaApp",
+  "ios": {"userInterfaceStyle": "automatic"}
 }
