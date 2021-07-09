@@ -1,3 +1,10 @@
 {
-    "hello": "مرحبا"
+    "hello": "مرحبا",
+    "changeLanguage": "تغيير اللغة",
+    "darkMode": "الوضع الداكن",
+    "arabic": "العربية",
+    "english": "الإنجليزية",
+    "noResultsFound":"لم يتم العثور على نتائج",
+    "news":"الاخبار",
+    "settings":"الإعدادات"
 }
