@@ -145,7 +145,6 @@
 				EF49671E7098CD30651B91F1 /* Pods-MusalaApp-MusalaAppTests.debug.xcconfig */,
 				599A1346A03F43406A949116 /* Pods-MusalaApp-MusalaAppTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
