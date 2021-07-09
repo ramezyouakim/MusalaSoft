@@ -1,32 +1,55 @@
 import 'react-native-gesture-handler';
 import * as React from 'react';
-import { NavigationContainer } from '@react-navigation/native';
+import { StatusBar } from 'react-native';
+import { AppearanceProvider } from 'react-native-appearance';
+import { NavigationContainer, DefaultTheme, DarkTheme } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { routerStackParamList } from './routerParamsList';
+import { connect } from 'react-redux';
 
-// Screens
-
-// Components
+//screens
+import NewArticleDetailScreen from '../screens/NewArticleDetailScreen/NewArticleDetailScreen';
 
 // Main Navigators
 import MainBottomTab from './mainBottomTab';
 const Stack = createStackNavigator<routerStackParamList>();
 
 // Main App Navigator
-function AppNavigator() {
+function AppNavigator(props) {
+    const { appTheme } = props;
+    const darkTheme = {
+        dark: true,
+        colors:{
+            ...DarkTheme.colors,
+            text:"#fff"
+        }
+    }
     return (
+        <AppearanceProvider>
+            <NavigationContainer theme={appTheme == 'dark' ? darkTheme : DefaultTheme}>
+                <StatusBar barStyle={appTheme == 'dark' ? "light-content" : "dark-content"} />
+                <Stack.Navigator
+                    // initialRouteName="NewArticleDetailScreen"
+                    screenOptions={() => ({
 
-        <NavigationContainer>
-            <Stack.Navigator
-                initialRouteName="HomeScreen"
-                screenOptions={() => ({
-
-                })}>
-                <Stack.Screen name="HomeScreen" options={() => ({ title: "Home" })} component={MainBottomTab} />
-            </Stack.Navigator>
-        </NavigationContainer>
+                    })}>
+                    <Stack.Screen name="HomeScreen" options={() => ({ title: "News App" })} component={MainBottomTab} />
+                    <Stack.Screen name="NewArticleDetailScreen" options={() => ({ title: "News App" })} component={NewArticleDetailScreen} />
+                </Stack.Navigator>
+            </NavigationContainer>
+        </AppearanceProvider>
 
     );
 }
 
-export default AppNavigator;
+const mapStateToProps = ({ common }) => {
+    const {
+        appTheme
+    } = common;
+
+    return {
+        appTheme
+    }
+}
+
+export default connect(mapStateToProps, null)(AppNavigator)
