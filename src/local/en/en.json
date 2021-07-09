@@ -6,5 +6,6 @@
     "english": "English",
     "noResultsFound":"No Results was found",
     "news":"News",
-    "settings":"Settings"
+    "settings":"Settings",
+    "searchPlaceHolder":"Search by article name"
 }

@@ -6,5 +6,6 @@
     "english": "الإنجليزية",
     "noResultsFound":"لم يتم العثور على نتائج",
     "news":"الاخبار",
-    "settings":"الإعدادات"
+    "settings":"الإعدادات",
+    "searchPlaceHolder":"البحث باسم المقالة"
 }

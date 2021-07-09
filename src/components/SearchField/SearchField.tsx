@@ -6,6 +6,7 @@ import store from '../../store';
 
 import { searchNews } from '../../actions/main'
 import { useTheme } from '@react-navigation/native';
+import localStrings from '../../local/main';
 
 const search = (value) => {
     store.dispatch(searchNews(value))
@@ -20,7 +21,7 @@ const SearchField = () => {
                 style={[style.searchField, { backgroundColor: colors.card, }]}
                 accessibilityLabel={'Search by article name'}
                 autoCapitalize={'none'}
-                placeholder={'Search by article name'}
+                placeholder={localStrings.searchPlaceHolder}
                 placeholderTextColor={colors.text}
                 onChangeText={(value) => { setSearchQuery(value); search(value) }}
                 underlineColorAndroid={'transparent'}
