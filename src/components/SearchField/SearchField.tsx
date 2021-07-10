@@ -18,7 +18,7 @@ const SearchField = () => {
     return (
         <View>
             <TextInput
-                style={[style.searchField, { backgroundColor: colors.card, }]}
+                style={[style.searchField, { backgroundColor: colors.card, color: colors.text }]}
                 accessibilityLabel={'Search by article name'}
                 autoCapitalize={'none'}
                 placeholder={localStrings.searchPlaceHolder}
