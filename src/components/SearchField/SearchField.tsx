@@ -16,7 +16,7 @@ const SearchField = () => {
     const [searchQuery, setSearchQuery] = useState("");
     const { colors } = useTheme();
     return (
-        <View>
+        <View> 
             <TextInput
                 style={[style.searchField, { backgroundColor: colors.card, color: colors.text }]}
                 accessibilityLabel={'Search by article name'}
